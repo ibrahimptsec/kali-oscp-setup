@@ -6,6 +6,7 @@ This script automates the installation of 50+ penetration testing tools specific
 
 🚀 Quick Start
 Command Installation
+
 git clone https://github.com/ibrahimptsec/kali-oscp-setup/
 cd kali-oscp-setup
 chmod +x kali-oscp-setup.sh
