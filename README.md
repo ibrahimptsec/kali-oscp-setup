@@ -1,114 +1,133 @@
-OSCP Tools Installation Script
-A comprehensive one-script solution for installing all essential OSCP (Offensive Security Certified Professional) preparation tools on Kali Linux.
+# 🛡️ OSCP Tools Installation Script
 
-🎯 Purpose
-This script automates the installation of 50+ penetration testing tools specifically needed for OSCP exam preparation on Kali Linux 6.12.25-amd64.
+A comprehensive **one-script solution** for installing all essential OSCP (Offensive Security Certified Professional) preparation tools on Kali Linux.
 
-🚀 Quick Start
-Command Installation
+---
 
+## 🎯 Purpose
+
+Automate the installation of **50+ top penetration testing tools** specifically for OSCP exam prep on Kali Linux (tested on 6.12.25-amd64).
+
+---
+
+## 🚀 Quick Start
+
+**Install in 4 easy steps:**
+
+```bash
 git clone https://github.com/ibrahimptsec/kali-oscp-setup/
-
 cd kali-oscp-setup
-
 chmod +x kali-oscp-setup.sh
-
 sudo ./kali-oscp-setup.sh
+```
 
+---
 
-📦 What Gets Installed
-🎯 Active Directory Tools
+## 📦 Tools Installed
 
-Impacket - Complete suite (secretsdump, GetNPUsers, GetUserSPNs, etc.)
-BloodHound + Neo4j - AD relationship mapping
-CrackMapExec - Network service exploitation
-Evil-WinRM - Windows Remote Management shell
-Kerbrute - Kerberos username enumeration
-Rubeus - Kerberos interaction toolkit (Windows binary)
-ldapdomaindump - LDAP enumeration tool
+### 🏢 Active Directory
 
-🌐 Web Application Tools
+- **Impacket** – Suite: secretsdump, GetNPUsers, GetUserSPNs, etc.
+- **BloodHound + Neo4j** – AD relationship mapping
+- **CrackMapExec** – Network exploitation
+- **Evil-WinRM** – WinRM shell
+- **Kerbrute** – Kerberos enumeration
+- **Rubeus** – Kerberos toolkit *(Windows binary)*
+- **ldapdomaindump** – LDAP enum
 
-Feroxbuster - Fast directory enumeration
-Aquatone - Domain flyover tool
-Nuclei - Vulnerability scanner with templates
-HTTPx - HTTP toolkit
-Subfinder - Subdomain discovery
-XSStrike - XSS detection and exploitation
-ParamSpider - Parameter discovery
-Arjun - HTTP parameter finder
-NoSQLMap - NoSQL injection tool
-CMSeeK - CMS detection and exploitation
-LinkFinder - JavaScript endpoint extractor
-SecretFinder - Find secrets in JS files
-GitTools - Git repository exploitation
-JWT tools - JSON Web Token testing
+### 🌐 Web Application
 
-⚡ Privilege Escalation Tools
+- **Feroxbuster** – Fast directory enum
+- **Aquatone** – Domain flyover
+- **Nuclei** – Vulnerability scanner
+- **HTTPx** – HTTP toolkit
+- **Subfinder** – Subdomain discovery
+- **XSStrike** – XSS testing
+- **ParamSpider** – Parameter discovery
+- **Arjun** – HTTP param finder
+- **NoSQLMap** – NoSQL injection
+- **CMSeeK** – CMS exploitation
+- **LinkFinder** – JS endpoint extractor
+- **SecretFinder** – Find secrets in JS
+- **GitTools** – Git repo exploitation
+- **JWT Tools** – Token testing
 
-PEASS-ng - LinPEAS/WinPEAS suite
-PowerSploit - PowerShell exploitation framework
-JuicyPotato, RoguePotato - Windows token impersonation
-PrintSpoofer - Print spooler exploitation
-GodPotato, SweetPotato - Advanced token abuse
-pspy - Process monitoring without root
-LinEnum - Linux enumeration script
-Linux Smart Enumeration - Advanced Linux enum
-traitor - Automated Linux privesc
-wesng - Windows Exploit Suggester
+### ⚡ Privilege Escalation
 
-🔍 Network Enumeration Tools
+- **PEASS-ng** – LinPEAS/WinPEAS
+- **PowerSploit** – PowerShell exploitation
+- **JuicyPotato, RoguePotato** – Token impersonation
+- **PrintSpoofer** – Spooler exploitation
+- **GodPotato, SweetPotato** – Token abuse
+- **pspy** – Process monitoring
+- **LinEnum** – Linux enum
+- **Linux Smart Enumeration**
+- **traitor** – Automated privesc
+- **wesng** – Windows Exploit Suggester
 
-AutoRecon - Automated reconnaissance
-nmapAutomator - Automated nmap scanning
-RustScan - High-speed port scanner
+### 🔍 Network Enumeration
 
-🔄 Pivoting & Tunneling Tools
+- **AutoRecon** – Automated recon
+- **nmapAutomator** – Automated nmap
+- **RustScan** – Fast port scanner
 
-Chisel - Fast TCP/UDP tunnel (Linux + Windows)
-Ligolo-ng - Advanced tunneling tool
-sshuttle - Transparent proxy server
+### 🔄 Pivoting & Tunneling
 
-🎧 Additional Tools
+- **Chisel** – TCP/UDP tunnel *(Linux/Windows)*
+- **Ligolo-ng** – Advanced tunneling
+- **sshuttle** – Transparent proxy
 
-pwncat-cs - Enhanced netcat replacement
-SecLists - Comprehensive wordlist collection
-PayloadsAllTheThings - Payload repository
+### 🎧 Additional
 
+- **pwncat-cs** – Netcat replacement
+- **SecLists** – Wordlists
+- **PayloadsAllTheThings** – Payload repo
 
-🛠️ Post-Installation Steps
-1. Restart Terminal
-bash# Apply new bash configuration
-source ~/.bashrc
-# Or restart your terminal
+---
 
-2. Test Key Tools
-bash# Test BloodHound
-sudo neo4j start
-bloodhound
+## 🛠️ Post-Installation
 
-# Test Impacket
-impacket-secretsdump -h
+1. **Restart Terminal**
+   ```bash
+   source ~/.bashrc
+   # Or just restart your terminal
+   ```
 
-# Test custom aliases
-cheat  # Shows OSCP cheat sheet
-tools  # Browse installed tools
+2. **Test Key Tools**
+   - BloodHound:
+     ```bash
+     sudo neo4j start
+     bloodhound
+     ```
+   - Impacket:
+     ```bash
+     impacket-secretsdump -h
+     ```
+   - Aliases:
+     ```bash
+     cheat      # OSCP cheat sheet
+     tools      # Browse installed tools
+     ```
 
-3. Verify Installation
-bash# Check installed tools
-ls /opt/
+3. **Verify Installation**
+   ```bash
+   ls /opt/
+   nmapquick --help
+   revshell
+   webenum
+   ```
 
-# Test custom functions
-nmapquick --help
-revshell
-webenum
+---
 
+## 🤝 Contributing
 
-🤝 Contributing
-Found a bug or want to add a tool? Contributions are welcome!
+Found a bug or want to add a tool? **Contributions are welcome!**
 
-Fork the repository
-Create a feature branch
-Make your changes
-Test on a fresh Kali installation
-Submit a pull request
+- Fork the repo
+- Create a feature branch
+- Make changes & test on fresh Kali
+- Submit a Pull Request
+
+---
+
+*Happy hacking & good luck on your OSCP journey!*
