@@ -15,7 +15,7 @@ Automate the installation of **50+ top penetration testing tools** specifically 
 **Install in 4 easy steps:**
 
 ```bash
-git clone https://github.com/ibrahimptsec/kali-oscp-setup/
+git clone https://github.com/securityforge/kali-oscp-setup
 cd kali-oscp-setup
 chmod +x kali-oscp-setup.sh
 sudo ./kali-oscp-setup.sh
